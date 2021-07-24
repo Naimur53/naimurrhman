@@ -3,6 +3,8 @@
 let sig = document.getElementById("signature");
 let sigLast = document.getElementById("signature_last");
 
+let sigWrapper = document.getElementById("svg_wrapper")
+
 let stars = document.getElementById("stars");
 let moon = document.getElementById("moon");
 let mountains_behind = document.getElementById("mountains_behind");
@@ -30,11 +32,21 @@ window.addEventListener("scroll", function () {
     myName.style.transform = `translateX(${value * 0.5}px)`;
 })
 
-// preloader 
+// preloader after
 function myFunction() {
     document.querySelector("body").style.opacity = "1";
+    //adding animation 
     sig.style.animationName = "sig";
     sigLast.style.animationName = "sig_last";
     console.log("done");
 
 }
+//hover on svg
+// sigWrapper.addEventListener('mouseenter', function () {
+//     sig.style.animationIterationCount = "infinite";
+//     sigLast.style.animationIterationCount = "infinite";
+// })
+// sigWrapper.addEventListener('mouseleave', function () {
+//     sig.style.animationIterationCount = "1";
+//     sigLast.style.animationIterationCount = "1";
+// })

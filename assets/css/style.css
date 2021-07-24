@@ -21,10 +21,14 @@ body{
 #signature{ 
     stroke-dasharray: 2697;
     stroke-dashoffset: 2697;
-    animation: 4s ease ;
+    animation:  4s ease ;
     animation-fill-mode: forwards;
 }
+#svg_wrapper:hover #signature{
+    animation-name:sig; 
+    animation-iteration-count: infinite;  
 
+} 
 @keyframes sig{
     to{
     stroke-dashoffset: 0;
@@ -33,39 +37,31 @@ body{
 #signature_last{
     stroke-dasharray: 20;
     stroke-dashoffset: 20;
-    animation: sig_last .3s ease ;
-    animation-delay: 3.5s;
+    animation: .3s ease 3.5s; 
     animation-fill-mode: forwards;
-}
+} 
 @keyframes sig_last{
     to{
         stroke-dashoffset: 0;
     }
 }
+#svg_wrapper:hover #signature_last{ 
+    animation:sig_last 4s ease; 
+    animation-iteration-count: infinite;  
+    animation-delay: 4s;
+
+} 
 /* hover  */
-#svg_wrapper:hover #signature{
-    animation: sig_hover 4s ease ; 
-    animation-fill-mode: forwards;
 
-}
-@keyframes sig_hover{
-    to{
-    stroke-dashoffset: 0;
-    }
-}
 /* hover second */
-#svg_wrapper:hover #signature_last{
-    animation: sig_last_hover .3s ease ; 
-    animation-delay: 3.5s;
-    animation-fill-mode: forwards;
-
-
+/* #svg_wrapper:hover #signature_last{  
+    animation-name: sig_last;
 }
 @keyframes sig_last_hover{
     to{
     stroke-dashoffset: 0;
     }
-}
+} */
 
 /*------------------
 header section
