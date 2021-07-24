@@ -21,7 +21,7 @@ body{
 #signature{ 
     stroke-dasharray: 2697;
     stroke-dashoffset: 2697;
-    animation: sig 4s ease ;
+    animation: 4s ease ;
     animation-fill-mode: forwards;
 }
 

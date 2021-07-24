@@ -1,7 +1,8 @@
-function myFunction() {
-    document.querySelector("body").style.opacity = "1";
-    console.log("done");
-}
+
+// sig animation after load 
+let sig = document.getElementById("signature");
+let sigLast = document.getElementById("signature_last");
+
 let stars = document.getElementById("stars");
 let moon = document.getElementById("moon");
 let mountains_behind = document.getElementById("mountains_behind");
@@ -28,3 +29,12 @@ window.addEventListener("scroll", function () {
     aboutMeTextWrapper.style.transform = `skewX(${value * 0.009}deg)`;
     myName.style.transform = `translateX(${value * 0.5}px)`;
 })
+
+// preloader 
+function myFunction() {
+    document.querySelector("body").style.opacity = "1";
+    sig.style.animationName = "sig";
+    sigLast.style.animationName = "sig_last";
+    console.log("done");
+
+}
