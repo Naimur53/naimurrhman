@@ -1,0 +1,152 @@
+/* font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* default css  */
+*{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;;
+    opacity: 0;
+}
+/* nav */
+/* svg */
+#svg_wrapper{
+    width: 60px;
+    height: 37px;
+}
+/* signature animation  */
+#signature{ 
+    stroke-dasharray: 2697;
+    stroke-dashoffset: 2697;
+    animation: sig 4s ease ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sig{
+    to{
+    stroke-dashoffset: 0;
+    }
+} 
+#signature_last{
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+    animation: sig_last .3s ease ;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes sig_last{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+/* hover  */
+#svg_wrapper:hover #signature{
+    animation: sig_hover 4s ease ; 
+    animation-fill-mode: forwards;
+
+}
+@keyframes sig_hover{
+    to{
+    stroke-dashoffset: 0;
+    }
+}
+/* hover second */
+#svg_wrapper:hover #signature_last{
+    animation: sig_last_hover .3s ease ; 
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+
+
+}
+@keyframes sig_last_hover{
+    to{
+    stroke-dashoffset: 0;
+    }
+}
+
+/*------------------
+header section
+*/  
+.top-header{
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    padding: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.top-header::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 15;
+}
+/*--------------------
+ header parallax img css code 
+*/
+.top-header img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* pointer-events: none; */
+}
+.top-header img#moon{
+    mix-blend-mode: screen;
+}
+#mountains_front{
+    z-index: 10;
+}
+#header_text{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    transform: translateY(-50px);
+    right: -420px;
+    
+}
+.naimur_btn{
+    z-index: 9; 
+    transform: translateY(80px); 
+}
+/*-------------
+ about me section  
+ */
+
+.about_me{
+    padding: 100px; 
+    padding: 100px;
+    background: #1c0522;  
+} 
+.about_me .about_me_text_wrapper h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #fff;
+    opacity: 0.8;
+
+} 
+.about_me .about_me_text_wrapper p{
+    font-size: 4em;
+    margin-bottom: 10px; 
+    color: #fff; 
+    font-weight: 800;
+    background-attachment: fixed; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../images/text3.jpg);
+    opacity: 0.8;
+
+} 
