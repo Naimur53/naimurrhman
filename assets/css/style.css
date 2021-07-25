@@ -5,7 +5,7 @@
     --animate-duration: 1s;
     --animate-delay: 1s;
     --animate-repeat: 1;
-  }
+}
 *{
     scroll-behavior: smooth;
 }
@@ -17,6 +17,80 @@ body{
     opacity: 0;
     color: #fff;
 }
+.naimur-height-100{
+    height: 100vh;
+}
+/* scrollbar change */
+/* width */
+/* 
+::-webkit-scrollbar {
+    width: 5px;
+} 
+::-webkit-scrollbar-track {
+    background: red;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: blue;
+} 
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+*/
+.scrollbar_wrapper{
+    position: fixed;
+    width: 6px;
+    height: 100vh;
+    z-index: 9999;
+    top:0;
+    right: 0;
+    background:#333;
+    border-radius: 0 0 10px 10px ;
+    overflow: hidden;
+}
+.scroll{
+    width: 100%;
+    background:linear-gradient(#2b1055,#7597de);
+    border-radius: 0 0 10px 10px ; 
+    animation: animate 5s linear infinite; 
+}
+@keyframes animate {
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+/* cursor   */
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    left: 0;
+    top:0;
+    border: 1px solid #7ea4f5;
+    pointer-events: none;
+    transform: translate(-50%, -50%); 
+    z-index: 10000000;
+    transition: .1s;
+}
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; 
+    left: 0;
+    top:0; 
+    background: #7ea4f5;
+    pointer-events: none;
+    transform: translate(-50%, -50%); 
+    z-index: 10000000;
+    transition: .15s; 
+} 
 /* nav */
 /* svg */
 #svg_wrapper{
@@ -161,13 +235,11 @@ header section
     -webkit-animation-duration: var(--animate-duration);
     animation-duration: var(--animate-duration);
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+    animation-fill-mode: both; 
+} 
+#rotation{
+    height: 480px;
 
-
-}
-.about_me_text_wrapper div.animation-1:hover{
-    /* animation-name: rubberBand; */
-   
 }
 /* animation  */
 @-webkit-keyframes rubberBand {
@@ -242,3 +314,28 @@ header section
         transform: scale3d(1, 1, 1);
     }
 } 
+
+/* skill section  */
+.skilled{
+    height: 100vh;
+    width: 100%; 
+    left: 0;
+    top: 0; 
+}
+.skill_fake{
+    height: 300vh;
+    width: 100%;
+}
+
+.left_skill{
+    width: 50%;
+}
+.projects{ 
+    width: 50%;
+}
+.project{
+    height: 100vh;  
+}
+.bg-s{
+    background: #000;
+}

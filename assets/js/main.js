@@ -2,9 +2,8 @@
 // sig animation after load 
 let sig = document.getElementById("signature");
 let sigLast = document.getElementById("signature_last");
-
 let sigWrapper = document.getElementById("svg_wrapper")
-
+//heder parallax
 let stars = document.getElementById("stars");
 let moon = document.getElementById("moon");
 let mountains_behind = document.getElementById("mountains_behind");
@@ -16,7 +15,30 @@ let mountains_front = document.getElementById("mountains_front");
 let aboutMeTextWrapper = document.querySelector(".about_me_text_wrapper");
 let aboutMeParagraph = document.querySelector("#about_me_text_Paragraph");
 let myName = document.querySelector("#about_me_name");
+// cursor 
+let cursor = document.querySelector(".cursor");
+let cursor2 = document.querySelector(".cursor2");
 
+// preloader after
+function myFunction() {
+    document.querySelector("body").style.opacity = "1";
+    //adding animation 
+    sig.style.animationName = "sig";
+    sigLast.style.animationName = "sig_last";
+    console.log("done");
+
+}
+// cursor js 
+document.addEventListener("mousemove", function (e) {
+    // cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px;";
+
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+    cursor2.style.left = e.clientX + "px";
+    cursor2.style.top = e.clientY + "px";
+})
+
+// parallax js 
 window.addEventListener("scroll", function () {
     let value = window.scrollY;
     stars.style.left = value * 0.25 + "px";
@@ -26,6 +48,23 @@ window.addEventListener("scroll", function () {
     header_text.style.marginRight = value * 2.5 + "px";
     header_text.style.marginTop = value * 1.5 + "px";
     btn.style.marginTop = value * 1.5 + "px";
+
+    //split
+    let check = window.innerHeight * 2;
+    if (value >= check) {
+        document.querySelector('.skilled').style.position = "fixed";
+        document.querySelector('.skilled').style.width = "50%";
+        // document.querySelector('.skilled').style.height = "100vh";
+        console.log("hi")
+    }
+    else {
+        document.querySelector('.skilled').style.position = "static";
+        document.querySelector('.skilled').style.width = "100%";
+        // document.querySelector('.skilled').style.height = "100vh";
+
+
+    }
+
 
     // about me  
     // aboutMeTextWrapper.style.transform = `skewX(${value * 0.019}deg)`;
@@ -44,15 +83,7 @@ window.addEventListener("scroll", function () {
 //     aboutMeParagraph.style.transform = "rotate(0deg)";
 //     aboutMeParagraph.style.transition = "transform .8s ease";
 // })
-// preloader after
-function myFunction() {
-    document.querySelector("body").style.opacity = "1";
-    //adding animation 
-    sig.style.animationName = "sig";
-    sigLast.style.animationName = "sig_last";
-    console.log("done");
 
-}
 //hover on svg
 // sigWrapper.addEventListener('mouseenter', function () {
 //     sig.style.animationIterationCount = "infinite";
@@ -75,9 +106,15 @@ function myFunction() {
 //     console.log(this)
 // })
 
+// scroll progress bar 
+let scroll = document.querySelector(".scroll");
+let totalHight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function () {
+    let progress = (window.pageYOffset / totalHight) * 100;
+    scroll.style.height = progress + "%";
+}
 
-
-// last 
+// animation of banner letter  
 const allAnimationLetter = document.querySelectorAll(".animation-1");
 
 for (let i = 0; i < allAnimationLetter.length; i++) {
@@ -85,21 +122,17 @@ for (let i = 0; i < allAnimationLetter.length; i++) {
     element.addEventListener("mouseenter", function () {
         element.style.animationName = "rubberBand";
         element.style.animationIterationCount = "1";
-        // setInterval(() => {
-        //     element.style.animationName = "none";
-        // }, 2000);
-
     })
     element.addEventListener("mouseleave", function () {
-        // element.style.animationName = "none";
         setTimeout(() => {
             element.style.animationName = "none";
         }, 1050);
     })
 
 }
+// animation of banner end
 
-//skills rotation 
+//banner rotation 
 $(document).ready(function () {
     var entries = [
         { label: 'Web design' },
@@ -107,7 +140,6 @@ $(document).ready(function () {
         { label: 'WordPress' },
         { label: 'Web development' },
         { label: 'woo Commerces' },
-
         { label: 'Landing page' },
         { label: 'JQUERY' },
         { label: '1 year experience' },
@@ -150,3 +182,4 @@ $(document).ready(function () {
     };
     $('#rotation').svg3DTagCloud(settings);
 })
+console.log(window.innerHeight);
