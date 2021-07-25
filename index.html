@@ -11,7 +11,7 @@
     <!-- font awesome  -->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!-- animation css cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <!-- main css  -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- responsive css  -->
@@ -76,15 +76,17 @@
             <img id="mountains_front" src="assets/images/mountains_front.png" alt="">
         </section>
         <!-- header section end  -->
-        <!-- about me section  -->
-        <section class="about_me">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="mt-5 about_me_text_wrapper">
+    </header>
+    <!-- about me section  -->
+    <section class="about_me_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class=" d-flex justify-content-center align-items-center h-100">
+                        <div class="about_me_text_wrapper mt-5">
                             <div class="d-inline-block animation-1"><span>H</span></div>
                             <div class="d-inline-block animation-1"><span>i</span></div>
-                            <div class="d-inline-block "><span class="text-red">,</span></div>
+                            <div class="d-inline-block "><span class="text-stop">,</span></div>
                             <br>
                             <div class="d-inline-block animation-1"><span>I</span></div>
                             <div class="d-inline-block "><span></span></div>
@@ -108,7 +110,7 @@
                             <div class="d-inline-block animation-1"><span></span></div>
                             <div class="d-inline-block animation-1"><span></span></div>
                             <div class="d-inline-block animation-1"><span></span></div>
-                            <div class="d-inline-block animation-1"><span>e</span></div>
+                            <div class="d-inline-block animation-1"><span>E</span></div>
                             <div class="d-inline-block animation-1"><span>n</span></div>
                             <div class="d-inline-block animation-1"><span>d</span></div>
                             <div class="d-inline-block animation-1"><span></span></div>
@@ -124,13 +126,13 @@
                             <div class="d-inline-block animation-1"><span>r</span></div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <img class="img-fluid" src="assets/images//sadi3.png" alt="">
-                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="rotation"></div>
                 </div>
             </div>
-        </section>
-    </header>
+        </div>
+    </section>
 
 
 
@@ -139,6 +141,10 @@
 
     <!-- bootstrap js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 3d rotation -->
+    <script src="assets/js/rotation.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
 </body>

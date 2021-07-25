@@ -98,3 +98,55 @@ for (let i = 0; i < allAnimationLetter.length; i++) {
     })
 
 }
+
+//skills rotation 
+$(document).ready(function () {
+    var entries = [
+        { label: 'Web design' },
+        { label: 'Fixing errors' },
+        { label: 'WordPress' },
+        { label: 'Web development' },
+        { label: 'woo Commerces' },
+
+        { label: 'Landing page' },
+        { label: 'JQUERY' },
+        { label: '1 year experience' },
+        { label: 'Javascript' },
+        { label: 'UX design' },
+        { label: 'UI design' },
+        { label: 'Python' }
+    ];
+    var settings = {
+        entries: entries,
+        width: "100%",
+        height: 480,
+        radius: '65%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: 'transparent',
+        opacityOver: 1.00,
+        opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 1,
+        fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '24',
+        fontColor: '#7ea4f5',
+        fontWeight: 'bold',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: false,
+        tooltipFontFamily: 'Oswald, Arial, sans-serif',
+        tooltipFontSize: '11',
+        tooltipFontColor: '#fff',
+        tooltipFontWeight: 'normal',//bold
+        tooltipFontStyle: 'normal',//italic 
+        tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        tooltipFontToUpperCase: false,
+        tooltipTextAnchor: 'middle',
+        tooltipDiffX: 0,
+        tooltipDiffY: 20
+
+    };
+    $('#rotation').svg3DTagCloud(settings);
+})
