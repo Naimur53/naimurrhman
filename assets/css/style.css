@@ -22,9 +22,9 @@ body{
 }
 /* scrollbar change */
 /* width */
-/* 
+
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 0px;
 } 
 ::-webkit-scrollbar-track {
     background: red;
@@ -36,7 +36,7 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: transparent;
 }
-*/
+
 .scrollbar_wrapper{
     position: fixed;
     width: 6px;
@@ -236,11 +236,7 @@ header section
     animation-duration: var(--animate-duration);
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; 
-} 
-#rotation{
-    height: 480px;
-
-}
+}  
 /* animation  */
 @-webkit-keyframes rubberBand {
     from {
@@ -338,4 +334,14 @@ header section
 }
 .bg-s{
     background: #000;
+} 
+.iframe_wrapper{
+    width: 100%; 
+}
+.iframe_wrapper iframe{
+    width: 1360px;
+    height: 200vh;
+    overflow-y: hidden;
+    transform:  scale(0.5);
+    transform-origin: top left; 
 }

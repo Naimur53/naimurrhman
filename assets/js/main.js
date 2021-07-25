@@ -108,8 +108,9 @@ window.addEventListener("scroll", function () {
 
 // scroll progress bar 
 let scroll = document.querySelector(".scroll");
-let totalHight = document.body.scrollHeight - window.innerHeight;
 window.onscroll = function () {
+    let totalHight = document.body.scrollHeight - window.innerHeight;
+
     let progress = (window.pageYOffset / totalHight) * 100;
     scroll.style.height = progress + "%";
 }
