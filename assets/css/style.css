@@ -11,7 +11,7 @@
 }
 body{
     min-height: 100vh;
-    background: linear-gradient(#2b1055,#7597de);
+    background: #1c0522;  
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;;
     opacity: 0;
@@ -213,12 +213,12 @@ header section
     font-weight: 600; 
     color: transparent; 
     margin-bottom: 10px; 
-    transition: color .3s; 
+    transition: all .3s; 
     -webkit-text-stroke:2px #fff ;
 } 
 .about_me_text_wrapper div span:hover{
-    color: #7ea4f5;
-    -webkit-text-stroke-color:#7ea4f5; 
+    color:#f51a75 ;
+    -webkit-text-stroke-color:#f51a75; 
 }
 
 .about_me_section .about_me_text_wrapper div span.text-stop{
@@ -311,6 +311,39 @@ header section
     }
 } 
 
+/* my img scratch */
+.my_img{
+    width: 100%;
+    height: 85%; 
+    position: relative; 
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transform: scale(0.8);
+    transition: transform .3s ease-in-out;
+}
+.my_img:hover{
+    transform: scale(1);
+    border-color: #f51a75;
+}
+.my_img img{
+    transition: .3s;
+}
+.my_img:hover img{ 
+    opacity: 0;
+}
+.my_img span{
+    display: block;
+    position: absolute; 
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: url(../images/hy.png);
+    transform: translate(-50%,-50%);
+    background-size: cover;  
+    pointer-events: none;
+}
+
 /* skill section  */
 .skilled{
     height: 100vh;
@@ -327,21 +360,13 @@ header section
     width: 50%;
 }
 .projects{ 
-    width: 50%;
+    width: 50%; 
 }
 .project{
     height: 100vh;  
 }
-.bg-s{
-    background: #000;
+.bg-s{ 
+    
+    background: #1c0522;  
 } 
-.iframe_wrapper{
-    width: 100%; 
-}
-.iframe_wrapper iframe{
-    width: 1360px;
-    height: 200vh;
-    overflow-y: hidden;
-    transform:  scale(0.5);
-    transform-origin: top left; 
-}
+ 

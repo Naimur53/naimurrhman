@@ -503,7 +503,7 @@
 
         function mouseOverHandler(event) {
 
-            mouseReact = false;
+            mouseReact = true;
 
             //---
 

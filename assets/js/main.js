@@ -29,14 +29,14 @@ function myFunction() {
 
 }
 // cursor js 
-document.addEventListener("mousemove", function (e) {
-    // cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px;";
+// document.addEventListener("mousemove", function (e) {
+//     // cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px;";
 
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-    cursor2.style.left = e.clientX + "px";
-    cursor2.style.top = e.clientY + "px";
-})
+//     cursor.style.left = e.clientX + "px";
+//     cursor.style.top = e.clientY + "px";
+//     cursor2.style.left = e.clientX + "px";
+//     cursor2.style.top = e.clientY + "px";
+// })
 
 // parallax js 
 window.addEventListener("scroll", function () {
@@ -51,7 +51,8 @@ window.addEventListener("scroll", function () {
 
     //split
     let check = window.innerHeight * 2;
-    if (value >= check) {
+    let check2 = window.innerHeight * 4.9999;
+    if (value >= check & value <= check2) {
         document.querySelector('.skilled').style.position = "fixed";
         document.querySelector('.skilled').style.width = "50%";
         // document.querySelector('.skilled').style.height = "100vh";
@@ -60,10 +61,31 @@ window.addEventListener("scroll", function () {
     else {
         document.querySelector('.skilled').style.position = "static";
         document.querySelector('.skilled').style.width = "100%";
-        // document.querySelector('.skilled').style.height = "100vh";
-
+        // document.querySelector('.skilled').style.height = "100vh"; 
 
     }
+
+    // animation of banner letter  
+    // if (value >= this.document.querySelector(".about_me_section").offsetTop) {
+    //     const allAnimationLetter = document.querySelectorAll(".animation-1");
+
+    //     for (let i = 0; i < allAnimationLetter.length; i++) {
+    //         const element = allAnimationLetter[i];
+
+    //         element.style.animationName = "rubberBand";
+    //         element.style.animationIterationCount = "1";
+
+
+    //         // setTimeout(() => {
+    //         //     element.style.animationName = "none";
+    //         // }, 1050);
+
+
+    //     }
+
+    // }
+
+    // animation of banner end
 
 
     // about me  
@@ -133,21 +155,58 @@ for (let i = 0; i < allAnimationLetter.length; i++) {
 }
 // animation of banner end
 
+// banner img 
+
+let myImg = document.querySelector(".my_img");
+myImg.addEventListener("mousemove", function (e) {
+    const bubbles = document.createElement("span");
+    bubbles.style.left = e.offsetX + "px";
+    bubbles.style.top = e.offsetY + "px";
+    myImg.appendChild(bubbles);
+
+    let smallImgs = document.querySelectorAll(".my_img span");
+    for (let i = 1; i < smallImgs.length; i++) {
+        const element = smallImgs[i - 1];
+        console.log(smallImgs.length);
+        setTimeout(() => {
+            element.remove();
+        }, 900);
+
+    }
+
+})
+myImg.addEventListener("mouseleave", function (e) {
+    let smallImgs = document.querySelectorAll(".my_img span");
+    for (let i = 0; i < smallImgs.length; i++) {
+        const element = smallImgs[i];
+        console.log(smallImgs.length);
+        setTimeout(() => {
+            element.remove();
+        }, 900);
+
+    }
+})
+// banner img end 
+
 //banner rotation 
 $(document).ready(function () {
     var entries = [
-        { label: 'Web design' },
+        { label: 'GSAP' },
         { label: 'Fixing errors' },
         { label: 'WordPress' },
-        { label: 'Web development' },
-        { label: 'woo Commerces' },
-        { label: 'Landing page' },
-        { label: 'JQUERY' },
-        { label: '1 year experience' },
+        { label: 'Angular' },
+        { label: 'Node Js' },
+        { label: 'JSON' },
+        { label: 'jQuery' },
+        { label: 'Git' },
         { label: 'Javascript' },
-        { label: 'UX design' },
-        { label: 'UI design' },
-        { label: 'Python' }
+        { label: 'npm' },
+        { label: 'SQI' },
+        { label: 'Css' },
+        { label: 'Bootstrap' },
+        { label: 'SASS' },
+        { label: 'HTML' },
+        { label: 'ES5/ES6' }
     ];
     var settings = {
         entries: entries,
@@ -161,10 +220,10 @@ $(document).ready(function () {
         opacityOut: 0.05,
         opacitySpeed: 6,
         fov: 800,
-        speed: 1,
+        speed: 2,
         fontFamily: 'Oswald, Arial, sans-serif',
         fontSize: '24',
-        fontColor: '#7ea4f5',
+        fontColor: '#f51a75',
         fontWeight: 'bold',//bold
         fontStyle: 'normal',//italic 
         fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
