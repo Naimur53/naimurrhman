@@ -313,8 +313,8 @@ header section
 
 /* my img scratch */
 .my_img{
-    width: 100%;
-    height: 85%; 
+    width: 500px;
+    height: 500px; 
     position: relative; 
     overflow: hidden;
     border-radius: 50%;
@@ -323,17 +323,20 @@ header section
     transition: transform .3s ease-in-out;
 }
 .my_img:hover{
-    transform: scale(1);
+    transform: scale(1) ;
     border-color: #f51a75;
 }
+.my_img:hover div{  
+    background: #f51a75;
+}
 .my_img img{
-    transition: .3s;
+    transition: .9s; 
 }
 .my_img:hover img{ 
-    opacity: 0;
+    opacity: 0; 
 }
 .my_img span{
-    display: block;
+    display: none;
     position: absolute; 
     width: 130px;
     height: 130px;
@@ -342,6 +345,21 @@ header section
     transform: translate(-50%,-50%);
     background-size: cover;  
     pointer-events: none;
+}
+.my_img div{
+    display: inline-block;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.247);
+    border: 1px solid transparent;
+    z-index: 999;
+    transition:2s;
+}
+.my_img div:hover{
+    background: transparent;
+    border: 1px solid #f51a75;
 }
 
 /* skill section  */
@@ -369,4 +387,56 @@ header section
     
     background: #1c0522;  
 } 
- 
+ /* porject hover  */
+ .containers{
+    position:relative;
+    width:800px;
+    height:500px;
+    background:#111;
+
+}
+.containers .clip{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+}
+.containers .clip.clip1{
+    background:url(../images/web/Screenshot_1.png);
+    background-size:cover;
+    clip-path: polygon(0 0, 55% 0, 20% 100%, 0% 100%);
+}
+.containers .clip.clip2{ 
+    background:url(../images/web/Screenshot_2.png);
+    background-size:cover;
+    clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
+}
+.containers .clip.clip3{ 
+    background:url(../images/web/Screenshot_3.png);
+    background-size:cover;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
+}
+.containers:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.containers .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-position: bottom;
+}
+.content{
+    position:absolute;
+    bottom:-100%;
+    left:0;
+    width:65%;
+    padding:10px;
+    background:rgba(255,255,255,0.3);
+    backdrop-filter:blur(24px);
+    opacity:0;
+    transition:0.5s;
+}
+.containers .clip:hover .content{
+    bottom:0;
+    opacity:1;
+}

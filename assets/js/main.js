@@ -157,7 +157,12 @@ for (let i = 0; i < allAnimationLetter.length; i++) {
 
 // banner img 
 
+// sneak game 
 let myImg = document.querySelector(".my_img");
+let body = document.querySelector("body");
+//sneak call
+// myImg.addEventListener("mouseenter", food);
+
 myImg.addEventListener("mousemove", function (e) {
     const bubbles = document.createElement("span");
     bubbles.style.left = e.offsetX + "px";
@@ -179,13 +184,34 @@ myImg.addEventListener("mouseleave", function (e) {
     let smallImgs = document.querySelectorAll(".my_img span");
     for (let i = 0; i < smallImgs.length; i++) {
         const element = smallImgs[i];
-        console.log(smallImgs.length);
         setTimeout(() => {
             element.remove();
         }, 900);
 
     }
 })
+
+// sneak game 
+function food() {
+    const food = document.createElement("div");
+    setInterval(() => {
+
+        let randomNumber = parseInt(Math.random() * 80);
+        let randomNumber2 = parseInt(Math.random() * 80);
+        food.style.left = randomNumber + "%";
+        food.style.top = randomNumber2 + "%";
+    }, 1000);
+    myImg.appendChild(food);
+
+
+}
+food();
+food();
+food();
+food();
+food();
+
+
 // banner img end 
 
 //banner rotation 
