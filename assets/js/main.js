@@ -38,6 +38,7 @@ function myFunction() {
 //     cursor.style.top = e.clientY + "px";
 //     cursor2.style.left = e.clientX + "px";
 //     cursor2.style.top = e.clientY + "px";
+
 // })
 
 // parallax js 
@@ -49,23 +50,22 @@ window.addEventListener("scroll", function () {
     mountains_front.style.top = value * 0.1 + "px";
     // header_text.style.marginRight = value * 2.5 + "px";
     // header_text.style.marginTop = value * 1.5 + "px";
-    btn.style.marginTop = value * 1.5 + "px";
 
     //split
-    let check = window.innerHeight * 2;
-    let check2 = window.innerHeight * 4.9999;
-    if (value >= check & value <= check2) {
-        document.querySelector('.skilled').style.position = "fixed";
-        document.querySelector('.skilled').style.width = "50%";
-        // document.querySelector('.skilled').style.height = "100vh";
-        console.log("hi")
-    }
-    else {
-        document.querySelector('.skilled').style.position = "static";
-        document.querySelector('.skilled').style.width = "100%";
-        // document.querySelector('.skilled').style.height = "100vh"; 
+    // let check = window.innerHeight * 2;
+    // let check2 = window.innerHeight * 4.9999;
+    // if (value >= check & value <= check2) {
+    //     document.querySelector('.skilled').style.position = "fixed";
+    //     document.querySelector('.skilled').style.width = "50%";
+    //     // document.querySelector('.skilled').style.height = "100vh";
+    //     console.log("hi")
+    // }
+    // else {
+    //     document.querySelector('.skilled').style.position = "static";
+    //     document.querySelector('.skilled').style.width = "100%";
+    //     // document.querySelector('.skilled').style.height = "100vh"; 
 
-    }
+    // }
 
     // animation of banner letter  
     // if (value >= this.document.querySelector(".about_me_section").offsetTop) {
@@ -204,22 +204,32 @@ myImg.addEventListener("mouseleave", function (e) {
 //banner rotation 
 $(document).ready(function () {
     var entries = [
-        { label: 'GSAP' },
+        { label: 'React' },
         { label: 'Fixing errors' },
-        { label: 'WordPress' },
-        { label: 'Angular' },
+        { label: 'Material Ui' },
+        { label: 'Firebase' },
+        { label: 'Private Route' },
+        { label: 'Mongodb' },
+        { label: 'Mongodb' },
+        { label: 'Express' },
         { label: 'Node Js' },
         { label: 'JSON' },
         { label: 'jQuery' },
+        { label: 'Dev Tool' },
+        { label: 'React Router' },
+        { label: 'React Hooks' },
+        { label: 'Axios' },
         { label: 'Git' },
+        { label: 'Stripe' },
         { label: 'Javascript' },
         { label: 'npm' },
-        { label: 'SQI' },
+        { label: 'Typescript' },
+        { label: 'No SQL' },
         { label: 'Css' },
+        { label: 'Tailwind' },
         { label: 'Bootstrap' },
-        { label: 'SASS' },
         { label: 'HTML' },
-        { label: 'ES5/ES6' }
+        { label: 'ES6' }
     ];
     var settings = {
         entries: entries,
@@ -233,7 +243,7 @@ $(document).ready(function () {
         opacityOut: 0.05,
         opacitySpeed: 6,
         fov: 800,
-        speed: 2,
+        speed: 1,
         fontFamily: 'Oswald, Arial, sans-serif',
         fontSize: '24',
         fontColor: '#f51a75',

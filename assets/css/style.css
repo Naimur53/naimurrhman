@@ -17,7 +17,7 @@ body{
     color: #fff; 
 }
 .naimur-height-100{
-    height: 100vh;
+    min-height: 100vh;
 }
 /* scrollbar change */
 /* width */
@@ -203,7 +203,7 @@ header section
     
 } 
 .about_me_text_container{  
-    z-index: 11111111111111; 
+    z-index:  10; 
     position: absolute;
     left: 0;
     right: 0;
