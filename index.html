@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- font awesome  -->
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- aos animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- wow animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- main css  -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- responsive css  -->
@@ -69,83 +73,94 @@
         </nav>
         <!-- navbar end  -->
         <!-- header section start  -->
-        <section class="top-header naimur-height-100">
-            <!-- img  -->
-            <img id="stars" src="assets/images/stars.png" alt="">
-            <img id="moon" src="assets/images/moon.png" alt="">
-            <img id="mountains_behind" src="assets/images/mountains_behind.png" alt="">
-            <!-- heading  -->
-            <h2 id="header_text">Naimur Rahman</h2>
-            <!-- button  -->
-            <a id="btn" href="#" class="naimur_btn btn bg-white">Explore</a>
-            <!-- last img  -->
-            <img id="mountains_front" src="assets/images/mountains_front.png" alt="">
+        <section class="position-relative    top-header-warper">
+            <div class="top-header position-absolute naimur-height-100">
+                <!-- img  -->
+                <img id="stars" src="assets/images/stars.png" alt="">
+                <img id="moon" src="assets/images/moon.png" alt="">
+                <img id="mountains_behind" src="assets/images/mountains_behind.png" alt="">
+                <!-- heading  -->
+                <!-- <h2 id="header_text">Naimur Rahman</h2> -->
+                <!-- button  -->
+                <!-- last img  -->
+                <img id="mountains_front" src="assets/images/mountains_front.png" alt="">
+            </div>
+            <div class="mt-5 about_me_text_container">
+                <div class="">
+                    <div class="container about_me_text_wrapper mt-5 ">
+                        <div class="row">
+                            <div class="col-md-7 ">
+                                <div class="mt-5">
+                                    <div data-aos="fade-right" class="animate__flash d-inline-block ">
+                                        <div class="d-inline-block animation-1 "><span>H</span></div>
+                                        <div class="d-inline-block animation-1 "><span>i</span>
+                                        </div>
+                                        <div class="d-inline-block animation-1 "><span>,</span></div>
+                                    </div>
+                                    <div data-aos="fade-left">
+                                        <div class="d-inline-block animation-1"><span>I</span></div>
+                                        <div class="d-inline-block "><span></span></div>
+                                        <div class="d-inline-block "><span></span></div>
+                                        <div class="d-inline-block animation-1"><span>a</span></div>
+                                        <div class="d-inline-block animation-1"><span>m</span></div>
+                                        <div class="d-inline-block animation-1"><span></span></div>
+                                        <div class="d-inline-block animation-1"><span></span></div>
+                                        <div class="d-inline-block animation-1"><span>N</span></div>
+                                        <div class="d-inline-block animation-1"><span>a</span></div>
+                                        <div class="d-inline-block animation-1"><span>i</span></div>
+                                        <div class="d-inline-block animation-1"><span>m</span></div>
+                                        <div class="d-inline-block animation-1"><span>u</span></div>
+                                        <div class="d-inline-block animation-1"><span>r</span></div>
+                                        <div class="d-inline-block animation-1"><span>,</span></div>
+                                    </div>
+                                    <div data-aos="fade-up">
+                                        <div class="d-inline-block animation-1"><span>M</span></div>
+                                        <div class="d-inline-block animation-1"><span>e</span></div>
+                                        <div class="d-inline-block animation-1"><span>r</span></div>
+                                        <div class="d-inline-block animation-1 me-2"><span>n</span></div>
+                                        <div class="d-inline-block animation-1 "><span>D</span></div>
+                                        <div class="d-inline-block animation-1"><span>e</span></div>
+                                        <div class="d-inline-block animation-1"><span>v</span></div>
+                                        <div class="d-inline-block animation-1"><span>e</span></div>
+                                        <div class="d-inline-block animation-1"><span>l</span></div>
+                                        <div class="d-inline-block animation-1"><span>o</span></div>
+                                        <div class="d-inline-block animation-1"><span>p</span></div>
+                                        <div class="d-inline-block animation-1"><span>e</span></div>
+                                        <div class="d-inline-block animation-1"><span>r</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 ">
+                                <img src="assets/images/hy.png" class="img-fluid " alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- header section end  -->
     </header>
     <!-- about me section  -->
     <section class="about_me_section " style="height: 100vh;">
         <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-lg-6">
-                    <div class=" d-flex justify-content-center align-items-center h-100">
-                        <div class="about_me_text_wrapper mt-5">
-                            <div class="d-inline-block animation-1"><span>H</span></div>
-                            <div class="d-inline-block animation-1"><span>i</span></div>
-                            <div class="d-inline-block "><span class="text-stop">,</span></div>
-                            <br>
-                            <div class="d-inline-block animation-1"><span>I</span></div>
-                            <div class="d-inline-block "><span></span></div>
-                            <div class="d-inline-block"><span></span></div>
-                            <div class="d-inline-block animation-1"><span>a</span></div>
-                            <div class="d-inline-block animation-1"><span>m</span></div>
-                            <div class="d-inline-block animation-1"><span></span></div>
-                            <div class="d-inline-block animation-1"><span></span></div>
-                            <div class="d-inline-block animation-1"><span>N</span></div>
-                            <div class="d-inline-block animation-1"><span>a</span></div>
-                            <div class="d-inline-block animation-1"><span>i</span></div>
-                            <div class="d-inline-block animation-1"><span>m</span></div>
-                            <div class="d-inline-block animation-1"><span>u</span></div>
-                            <div class="d-inline-block animation-1"><span>r</span></div>
-                            <br>
-                            <div class="d-inline-block animation-1"><span>F</span></div>
-                            <div class="d-inline-block animation-1"><span>r</span></div>
-                            <div class="d-inline-block animation-1"><span>o</span></div>
-                            <div class="d-inline-block animation-1"><span>n</span></div>
-                            <div class="d-inline-block animation-1"><span>t</span></div>
-                            <div class="d-inline-block  "><span class="text-stop">-</span></div>
-                            <div class="d-inline-block animation-1"><span>E</span></div>
-                            <div class="d-inline-block animation-1"><span>n</span></div>
-                            <div class="d-inline-block animation-1"><span>d</span></div>
-                            <div class="d-inline-block  "><span class="text-stop">-</span></div>
-                            <div class="d-inline-block animation-1"><span>D</span></div>
-                            <div class="d-inline-block animation-1"><span>e</span></div>
-                            <div class="d-inline-block animation-1"><span>v</span></div>
-                            <div class="d-inline-block animation-1"><span>e</span></div>
-                            <div class="d-inline-block animation-1"><span>l</span></div>
-                            <div class="d-inline-block animation-1"><span>o</span></div>
-                            <div class="d-inline-block animation-1"><span>p</span></div>
-                            <div class="d-inline-block animation-1"><span>e</span></div>
-                            <div class="d-inline-block animation-1"><span>r</span></div>
-                        </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="my_img">
+
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex align-items-center">
-                    <div class="my_img">
-                        <img draggable="false" src="assets/images/hy.png" class="img-fluid" alt="">
-                    </div>
+                <div class="col-md-7">
+                    <div id="rotation"></div>
                 </div>
             </div>
+
         </div>
     </section>
     <section class="skill_section d-flex ">
         <div class="left_skill">
             <div class="skilled bg-s">
-                <div id="rotation"></div>
-
             </div>
             <!-- <div class="skill_fake bg-dark"></div> -->
-
         </div>
         <div class="projects">
             <div class="project bg-success">
@@ -159,29 +174,27 @@
         </div>
     </section>
     <section>
-        <div class="containers">
-            <div class="clip clip1">
-                <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <script type="text/javascript" src="https://form.jotform.com/jsform/213322425414444"></script>
                 </div>
-            </div>
-            <div class="clip clip2">
-                <div class="content">
-                </div>
-            </div>
-            <div class="clip clip3">
-                <div class="content">
-                </div>
+
             </div>
         </div>
+
     </section>
 
     <!-- bootstrap js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- jot from -->
 
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- 3d rotation -->
     <script src="assets/js/rotation.js"></script>
+    <!-- aos animation  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
 </body>

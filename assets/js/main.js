@@ -7,7 +7,7 @@ let sigWrapper = document.getElementById("svg_wrapper")
 let stars = document.getElementById("stars");
 let moon = document.getElementById("moon");
 let mountains_behind = document.getElementById("mountains_behind");
-let header_text = document.getElementById("header_text");
+// let header_text = document.getElementById("header_text");
 let btn = document.getElementById("btn");
 let mountains_front = document.getElementById("mountains_front");
 // about me 
@@ -18,10 +18,12 @@ let myName = document.querySelector("#about_me_name");
 // cursor 
 let cursor = document.querySelector(".cursor");
 let cursor2 = document.querySelector(".cursor2");
-
+//animation letter
+const allAnimationLetter = document.querySelectorAll(".animation-1");
+AOS.init();
 // preloader after
 function myFunction() {
-    document.querySelector("body").style.opacity = "1";
+
     //adding animation 
     sig.style.animationName = "sig";
     sigLast.style.animationName = "sig_last";
@@ -45,8 +47,8 @@ window.addEventListener("scroll", function () {
     moon.style.top = value * 1 + "px";
     mountains_behind.style.top = value * 0.8 + "px";
     mountains_front.style.top = value * 0.1 + "px";
-    header_text.style.marginRight = value * 2.5 + "px";
-    header_text.style.marginTop = value * 1.5 + "px";
+    // header_text.style.marginRight = value * 2.5 + "px";
+    // header_text.style.marginTop = value * 1.5 + "px";
     btn.style.marginTop = value * 1.5 + "px";
 
     //split
@@ -137,8 +139,11 @@ window.onscroll = function () {
     scroll.style.height = progress + "%";
 }
 
-// animation of banner letter  
-const allAnimationLetter = document.querySelectorAll(".animation-1");
+// animation of banner letter
+// window.onload = function () {
+
+//     console.log('dondjdkfjalkjfkad')
+// };
 
 for (let i = 0; i < allAnimationLetter.length; i++) {
     const element = allAnimationLetter[i];
@@ -191,25 +196,7 @@ myImg.addEventListener("mouseleave", function (e) {
     }
 })
 
-// sneak game 
-function food() {
-    const food = document.createElement("div");
-    setInterval(() => {
-
-        let randomNumber = parseInt(Math.random() * 80);
-        let randomNumber2 = parseInt(Math.random() * 80);
-        food.style.left = randomNumber + "%";
-        food.style.top = randomNumber2 + "%";
-    }, 1000);
-    myImg.appendChild(food);
-
-
-}
-food();
-food();
-food();
-food();
-food();
+// sneak game  
 
 
 // banner img end 

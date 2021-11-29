@@ -13,9 +13,8 @@ body{
     min-height: 100vh;
     background: #1c0522;  
     overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;;
-    opacity: 0;
-    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    color: #fff; 
 }
 .naimur-height-100{
     height: 100vh;
@@ -170,6 +169,9 @@ header section
 /*--------------------
  header parallax img css code 
 */
+.top-header-warper{
+    height: 100vh;
+}
 .top-header img{
     position: absolute;
     top: 0;
@@ -198,6 +200,15 @@ header section
 .naimur_btn{
     z-index: 9; 
     transform: translateY(80px); 
+    
+} 
+.about_me_text_container{  
+    z-index: 11111111111111; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 /*-------------
  about me section  
@@ -212,7 +223,6 @@ header section
     font-size: 4em; 
     font-weight: 600; 
     color: transparent; 
-    margin-bottom: 10px; 
     transition: all .3s; 
     -webkit-text-stroke:2px #fff ;
 } 
@@ -311,56 +321,8 @@ header section
     }
 } 
 
-/* my img scratch */
-.my_img{
-    width: 500px;
-    height: 500px; 
-    position: relative; 
-    overflow: hidden;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    transform: scale(0.8);
-    transition: transform .3s ease-in-out;
-}
-.my_img:hover{
-    transform: scale(1) ;
-    border-color: #f51a75;
-}
-.my_img:hover div{  
-    background: #f51a75;
-}
-.my_img img{
-    transition: .9s; 
-}
-.my_img:hover img{ 
-    opacity: 0; 
-}
-.my_img span{
-    display: none;
-    position: absolute; 
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background: url(../images/hy.png);
-    transform: translate(-50%,-50%);
-    background-size: cover;  
-    pointer-events: none;
-}
-.my_img div{
-    display: inline-block;
-    width: 20px;
-    height: 20px; 
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.247);
-    border: 1px solid transparent;
-    z-index: 999;
-    transition:2s;
-}
-.my_img div:hover{
-    background: transparent;
-    border: 1px solid #f51a75;
-}
+/* my img scratch */ 
+ 
 
 /* skill section  */
 .skilled{
