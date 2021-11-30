@@ -201,8 +201,10 @@ myImg.addEventListener("mouseleave", function (e) {
 
 // banner img end 
 let width = "100%"
+let fontSize = '20'
 if (window.innerWidth < 600) {
     width = 320;
+    fontSize = '15';
 }
 console.log(width);
 //banner rotation 
@@ -249,7 +251,7 @@ $(document).ready(function () {
         fov: 800,
         speed: 2,
         fontFamily: 'Oswald, Arial, sans-serif',
-        fontSize: '20',
+        fontSize: fontSize,
         fontColor: '#f51a75',
         fontWeight: 'bold',//bold
         fontStyle: 'normal',//italic 
