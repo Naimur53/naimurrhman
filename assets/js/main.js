@@ -200,7 +200,11 @@ myImg.addEventListener("mouseleave", function (e) {
 
 
 // banner img end 
-
+let width = "100%"
+if (window.innerWidth < 600) {
+    width = 320;
+}
+console.log(width);
 //banner rotation 
 $(document).ready(function () {
     var entries = [
@@ -233,7 +237,7 @@ $(document).ready(function () {
     ];
     var settings = {
         entries: entries,
-        width: "100%",
+        width: width,
         height: 480,
         radius: '65%',
         radiusMin: 75,
@@ -243,9 +247,9 @@ $(document).ready(function () {
         opacityOut: 0.05,
         opacitySpeed: 6,
         fov: 800,
-        speed: 1,
+        speed: 2,
         fontFamily: 'Oswald, Arial, sans-serif',
-        fontSize: '24',
+        fontSize: '20',
         fontColor: '#f51a75',
         fontWeight: 'bold',//bold
         fontStyle: 'normal',//italic 
@@ -266,3 +270,4 @@ $(document).ready(function () {
     $('#rotation').svg3DTagCloud(settings);
 })
 console.log(window.innerHeight);
+console.log(window.innerWidth);

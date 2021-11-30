@@ -172,6 +172,9 @@ header section
 .top-header-warper{
     height: 100vh;
 }
+.sadi-img{
+    opacity: .92;
+}
 .top-header img{
     position: absolute;
     top: 0;
