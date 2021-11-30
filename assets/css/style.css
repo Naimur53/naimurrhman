@@ -361,6 +361,13 @@ header section
     background: url('/assets/images/projectss/health.png');
     /* background-position: center; */ 
 }
+.project-5{
+    /* background-color: red; */
+    background: url('/assets/images/projectss/presento.png');
+    /* background-position: center; */ 
+    transition: 30s;
+
+}
 .project-wrapper:hover .project .project-s{
     background-position: bottom center;
     
