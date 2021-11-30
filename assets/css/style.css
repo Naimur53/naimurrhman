@@ -342,28 +342,28 @@ header section
 } 
 .project-1{
     /* background-color: red; */
-    background: url('/assets/images/projectss/Image\ 5.png');
+    background: url('/assets/images/projectss/hot.jpg');
     /* background-position: center; */
     
 }
 .project-2{
     /* background-color: red; */
-    background: url('/assets/images/projectss/dronehouse.png');
+    background: url('/assets/images/projectss/dronehouse.jpg');
     /* background-position: center; */ 
 }
 .project-3{
     /* background-color: red; */
-    background: url('/assets/images/projectss/hashtour.png');
+    background: url('/assets/images/projectss/hashtour.jpg');
     /* background-position: center; */ 
 }
 .project-4{
     /* background-color: red; */
-    background: url('/assets/images/projectss/health.png');
+    background: url('/assets/images/projectss/health.jpg');
     /* background-position: center; */ 
 }
 .project-5{
     /* background-color: red; */
-    background: url('/assets/images/projectss/presento.png');
+    background: url('/assets/images/projectss/presento.jpg');
     /* background-position: center; */ 
     transition: 30s;
 
