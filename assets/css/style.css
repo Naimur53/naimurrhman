@@ -8,6 +8,8 @@
 }
 *{
     scroll-behavior: smooth;
+    cursor: none ;
+
 }
 body{
     min-height: 100vh;
@@ -22,19 +24,20 @@ body{
 /* scrollbar change */
 /* width */
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 0px;
 } 
-::-webkit-scrollbar-track {
-    background: red;
+body::-webkit-scrollbar-track {
+    background: rgb(81, 71, 71);
 }
  
-::-webkit-scrollbar-thumb {
-    background: blue;
+body::-webkit-scrollbar-thumb {
+    background: rgb(12, 12, 15);
 } 
-::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
     background: transparent;
 }
+ 
 
 .scrollbar_wrapper{
     position: fixed;
@@ -91,6 +94,9 @@ body{
     transition: .15s; 
 } 
 /* nav */
+#nav{
+    transition: .3s;
+}
 /* svg */
 #svg_wrapper{
     width: 90px;
@@ -132,6 +138,9 @@ body{
     animation-delay: 4s;
 
 } 
+.form-all{
+    background: transparent;
+}
 /* hover  */
 
 /* hover second */
@@ -319,6 +328,11 @@ header section
  
 
 /* skill section  */
+.details-por-wrapper{
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
 
 .project-wrapper{
     /* background: rgba(255, 255, 255, 0.1); */
@@ -368,7 +382,7 @@ header section
     transition: 30s;
 
 }
-.project-wrapper:hover .project .project-s{
+.project-wrapper:hover   .project-s{
     background-position: bottom center;
     
 }
@@ -396,9 +410,12 @@ header section
     margin-top: 2rem;
     margin-bottom: 2rem; 
 }
-.more button{
+.more a{
     width: 100%;
-    padding: 1rem 0rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0rem;
     background: #ffffff21;
     border:none;
     color: white;

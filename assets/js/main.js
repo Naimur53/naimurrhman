@@ -17,10 +17,13 @@ let aboutMeParagraph = document.querySelector("#about_me_text_Paragraph");
 let myName = document.querySelector("#about_me_name");
 // cursor 
 let cursor = document.querySelector(".cursor");
-let cursor2 = document.querySelector(".cursor2");
+let cursorinner = document.querySelector(".cursor2");
 //animation letter
 const allAnimationLetter = document.querySelectorAll(".animation-1");
+
+const nav = document.querySelector('#nav')
 AOS.init();
+
 
 // preloader after
 function myFunction() {
@@ -31,20 +34,40 @@ function myFunction() {
     console.log("done");
 
 }
-// cursor js 
-// document.addEventListener("mousemove", function (e) {
-//     // cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px;";
+// cursor js  
 
-//     cursor.style.left = e.clientX + "px";
-//     cursor.style.top = e.clientY + "px";
-//     cursor2.style.left = e.clientX + "px";
-//     cursor2.style.top = e.clientY + "px";
+document.addEventListener('mousemove', function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
 
-// })
+document.addEventListener('mousemove', function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursorinner.style.left = x + 'px';
+    cursorinner.style.top = y + 'px';
+});
+
+
+
+
+
+
 
 // parallax js 
 window.addEventListener("scroll", function () {
     let value = window.scrollY;
+    if (value > 500) {
+        nav.style.background = 'rgba(255, 255, 220,0.1)';
+        nav.style.backdropFilter = 'blur(5px)';
+    }
+    else {
+        nav.style.background = 'transparent';
+        nav.style.backdropFilter = 'blur(0)';
+
+
+    }
     stars.style.left = value * 0.25 + "px";
     moon.style.top = value * 1 + "px";
     mountains_behind.style.top = value * 0.8 + "px";
@@ -248,10 +271,10 @@ $(document).ready(function () {
         bgDraw: true,
         bgColor: 'transparent',
         opacityOver: 1.00,
-        opacityOut: 0.05,
+        opacityOut: 1.00,
         opacitySpeed: 6,
         fov: 800,
-        speed: 2,
+        speed: 1,
         fontFamily: 'Oswald, Arial, sans-serif',
         fontSize: fontSize,
         fontColor: '#f51a75',
