@@ -21,6 +21,7 @@ let cursor2 = document.querySelector(".cursor2");
 //animation letter
 const allAnimationLetter = document.querySelectorAll(".animation-1");
 AOS.init();
+
 // preloader after
 function myFunction() {
 
@@ -196,7 +197,8 @@ myImg.addEventListener("mouseleave", function (e) {
     }
 })
 
-// sneak game  
+// 3D card
+
 
 
 // banner img end 
