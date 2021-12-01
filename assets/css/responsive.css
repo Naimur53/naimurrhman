@@ -17,7 +17,6 @@ px      68    160    252    344    436    528    620    712    */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	
-	 
 }
 
 
@@ -37,6 +36,12 @@ px      68    160    252    */
 	.sadi-img{
 		width: 75%;
 	}
+	.cursor{
+		display: none!important;
+	}
+	.cursor2{
+		 display: none!important;
+	 }
 	 
 	
 }

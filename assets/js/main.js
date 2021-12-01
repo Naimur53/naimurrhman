@@ -20,18 +20,38 @@ let cursor = document.querySelector(".cursor");
 let cursorinner = document.querySelector(".cursor2");
 //animation letter
 const allAnimationLetter = document.querySelectorAll(".animation-1");
-
-const nav = document.querySelector('#nav')
+const body = document.getElementsByTagName('body')[0];
+const nav = document.querySelector('#nav');
+const preloader = document.getElementById('preloader');
+const main = document.getElementsByTagName('main')[0];
 AOS.init();
 
-
 // preloader after
-function myFunction() {
+function myFunction(e) {
 
+    preloader.style.opacity = '0';
+    preloader.style.visibility = 'hidden';
+    body.style.overflowY = 'scroll';
     //adding animation 
+    if (window.innerWidth < 500) {
+
+        nav.style.background = 'rgba(255, 255, 220,0.1)';
+        nav.style.backdropFilter = 'blur(15px)';
+    }
     sig.style.animationName = "sig";
     sigLast.style.animationName = "sig_last";
-    console.log("done");
+    for (let i = 0; i < allAnimationLetter.length; i++) {
+        const element = allAnimationLetter[i];
+        element.style.animationName = "rubberBand";
+        element.style.animationDelay = `${i * 30}ms`;
+        element.style.animationIterationCount = "1";
+        setTimeout(() => {
+            element.style.animationDelay = `0s`;
+            element.style.animationName = "none";
+        }, i * 30 + 1080);
+    }
+
+
 
 }
 // cursor js  
@@ -51,109 +71,25 @@ document.addEventListener('mousemove', function (e) {
 
 
 
-
-
-
-
 // parallax js 
 window.addEventListener("scroll", function () {
     let value = window.scrollY;
-    if (value > 500) {
-        nav.style.background = 'rgba(255, 255, 220,0.1)';
-        nav.style.backdropFilter = 'blur(5px)';
-    }
-    else {
-        nav.style.background = 'transparent';
-        nav.style.backdropFilter = 'blur(0)';
+    if (window.innerWidth > 500) {
 
-
+        if (value > 500) {
+            nav.style.background = 'rgba(255, 255, 220,0.1)';
+            nav.style.backdropFilter = 'blur(5px)';
+        }
+        else {
+            nav.style.background = 'transparent';
+            nav.style.backdropFilter = 'blur(0)';
+        }
     }
     stars.style.left = value * 0.25 + "px";
     moon.style.top = value * 1 + "px";
     mountains_behind.style.top = value * 0.8 + "px";
     mountains_front.style.top = value * 0.1 + "px";
-    // header_text.style.marginRight = value * 2.5 + "px";
-    // header_text.style.marginTop = value * 1.5 + "px";
-
-    //split
-    // let check = window.innerHeight * 2;
-    // let check2 = window.innerHeight * 4.9999;
-    // if (value >= check & value <= check2) {
-    //     document.querySelector('.skilled').style.position = "fixed";
-    //     document.querySelector('.skilled').style.width = "50%";
-    //     // document.querySelector('.skilled').style.height = "100vh";
-    //     console.log("hi")
-    // }
-    // else {
-    //     document.querySelector('.skilled').style.position = "static";
-    //     document.querySelector('.skilled').style.width = "100%";
-    //     // document.querySelector('.skilled').style.height = "100vh"; 
-
-    // }
-
-    // animation of banner letter  
-    // if (value >= this.document.querySelector(".about_me_section").offsetTop) {
-    //     const allAnimationLetter = document.querySelectorAll(".animation-1");
-
-    //     for (let i = 0; i < allAnimationLetter.length; i++) {
-    //         const element = allAnimationLetter[i];
-
-    //         element.style.animationName = "rubberBand";
-    //         element.style.animationIterationCount = "1";
-
-
-    //         // setTimeout(() => {
-    //         //     element.style.animationName = "none";
-    //         // }, 1050);
-
-
-    //     }
-
-    // }
-
-    // animation of banner end
-
-
-    // about me  
-    // aboutMeTextWrapper.style.transform = `skewX(${value * 0.019}deg)`;
-    // myName.style.transform = `translateX(${value * 0.5}px)`;
 })
-// Text 3d 
-// aboutMeTextWrapper.addEventListener('mousemove', (e) => {
-//     let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-//     let yAxis = (window.innerWidth / 2 - e.pageY) / 25;
-//     aboutMeParagraph.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-// })
-// aboutMeTextWrapper.addEventListener('mouseenter', (e) => {
-//     aboutMeParagraph.style.transition = "none";
-// })
-// aboutMeTextWrapper.addEventListener('mouseleave', (e) => {
-//     aboutMeParagraph.style.transform = "rotate(0deg)";
-//     aboutMeParagraph.style.transition = "transform .8s ease";
-// })
-
-//hover on svg
-// sigWrapper.addEventListener('mouseenter', function () {
-//     sig.style.animationIterationCount = "infinite";
-//     sigLast.style.animationIterationCount = "infinite";
-// })
-// sigWrapper.addEventListener('mouseleave', function () {
-//     sig.style.animationIterationCount = "1";
-//     sigLast.style.animationIterationCount = "1";
-// })
-
-//bet on hover 
-// const allText = document.querySelector(".about_me_text_wrapper div");
-// document.querySelector(".about_me_text_wrapper div").addEventListener("mouseover", function () {
-//     let el = this;
-//     el.classList.add("animate__heartBeat");
-//     setInterval(function () {
-//         el.classList.remove("animate__heartBeat");
-
-//     }, 1000);
-//     console.log(this)
-// })
-
 // scroll progress bar 
 let scroll = document.querySelector(".scroll");
 window.onscroll = function () {
@@ -163,11 +99,7 @@ window.onscroll = function () {
     scroll.style.height = progress + "%";
 }
 
-// animation of banner letter
-// window.onload = function () {
-
-//     console.log('dondjdkfjalkjfkad')
-// };
+// animation of banner letter 
 
 for (let i = 0; i < allAnimationLetter.length; i++) {
     const element = allAnimationLetter[i];
@@ -182,46 +114,6 @@ for (let i = 0; i < allAnimationLetter.length; i++) {
     })
 
 }
-// animation of banner end
-
-// banner img 
-
-// sneak game 
-let myImg = document.querySelector(".my_img");
-let body = document.querySelector("body");
-//sneak call
-// myImg.addEventListener("mouseenter", food);
-
-myImg.addEventListener("mousemove", function (e) {
-    const bubbles = document.createElement("span");
-    bubbles.style.left = e.offsetX + "px";
-    bubbles.style.top = e.offsetY + "px";
-    myImg.appendChild(bubbles);
-
-    let smallImgs = document.querySelectorAll(".my_img span");
-    for (let i = 1; i < smallImgs.length; i++) {
-        const element = smallImgs[i - 1];
-        console.log(smallImgs.length);
-        setTimeout(() => {
-            element.remove();
-        }, 900);
-
-    }
-
-})
-myImg.addEventListener("mouseleave", function (e) {
-    let smallImgs = document.querySelectorAll(".my_img span");
-    for (let i = 0; i < smallImgs.length; i++) {
-        const element = smallImgs[i];
-        setTimeout(() => {
-            element.remove();
-        }, 900);
-
-    }
-})
-
-// 3D card
-
 
 
 // banner img end 
@@ -229,9 +121,8 @@ let width = "100%"
 let fontSize = '20'
 if (window.innerWidth < 600) {
     width = 320;
-    fontSize = '15';
+    fontSize = '10';
 }
-console.log(width);
 //banner rotation 
 $(document).ready(function () {
     var entries = [
@@ -296,5 +187,3 @@ $(document).ready(function () {
     };
     $('#rotation').svg3DTagCloud(settings);
 })
-console.log(window.innerHeight);
-console.log(window.innerWidth);

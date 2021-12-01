@@ -1,5 +1,6 @@
 /* font  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 /* default css  */
 :root {
     --animate-duration: 1s;
@@ -11,10 +12,11 @@
     cursor: none ;
 
 }
-body{
-    min-height: 100vh;
+body{ 
     background: #1c0522;  
-    overflow-x: hidden;
+    height: 100vh;
+    overflow: hidden; 
+
     font-family: 'Poppins', sans-serif;
     color: #fff; 
 }
@@ -66,6 +68,32 @@ body::-webkit-scrollbar-thumb:hover {
         filter: hue-rotate(360deg);
     }
 }
+/* preloader  */  
+  
+#preloader p {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
 /* cursor   */
 .cursor{
     position: fixed;
@@ -93,13 +121,25 @@ body::-webkit-scrollbar-thumb:hover {
     z-index: 10000000;
     transition: .15s; 
 } 
+#preloader{
+    position: fixed;
+    display: flex; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999999999999999999;
+    background: #000;
+    transition: all  .3s;
+    cursor: default!important;
+}
 /* nav */
 #nav{
     transition: .3s;
 }
 /* svg */
 #svg_wrapper{
-    width: 90px;
+    width: 70px;
     height: 56px;
     position: absolute;
     top: 0;
@@ -110,11 +150,6 @@ body::-webkit-scrollbar-thumb:hover {
     stroke-dashoffset: 2697;
     animation:  4s ease ;
     animation-fill-mode: forwards;
-}
-#svg_wrapper:hover #signature{
-    animation-name:sig; 
-    animation-iteration-count: infinite;  
-
 } 
 @keyframes sig{
     to{
@@ -198,8 +233,7 @@ header section
 }
 #mountains_front{
     z-index: 10;
-}
- 
+}    
 .naimur_btn{
     z-index: 9; 
     transform: translateY(80px); 
