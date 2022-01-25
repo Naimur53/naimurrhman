@@ -51,7 +51,22 @@ function myFunction(e) {
         }, i * 30 + 1080);
     }
 
-
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        var templateParams = {
+            name: 'James',
+            notes: 'Check this out!'
+        };
+        emailjs.sendForm('service_k43azve', 'template_u7c7h1b', '#contact-form')
+            .then(function () {
+                console.log('SUCCESS!');
+                alert('Mail send')
+            }, function (error) {
+                console.log('FAILED...', error);
+                alert('Failed to send.Please try again later')
+            });
+    });
 
 }
 // cursor js  
@@ -69,6 +84,7 @@ document.addEventListener('mousemove', function (e) {
     cursorinner.style.top = y + 'px';
 });
 
+// email js 
 
 
 // parallax js 
@@ -114,14 +130,17 @@ for (let i = 0; i < allAnimationLetter.length; i++) {
     })
 
 }
+// isotope
+// external js: isotope.pkgd.js
+
 
 
 // banner img end 
 let width = "100%"
 let fontSize = '20'
 if (window.innerWidth < 600) {
-    width = 320;
-    fontSize = '10';
+    width = 350;
+    fontSize = '12';
 }
 //banner rotation 
 $(document).ready(function () {
@@ -186,4 +205,37 @@ $(document).ready(function () {
 
     };
     $('#rotation').svg3DTagCloud(settings);
+
+    // init Isotope
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        masonry: {
+            // use outer width of grid-sizer for columnWidth
+            columnWidth: '.grid-sizer'
+        }
+    })
+    //img button
+    $('.filter-button-group').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+    });
+    $('.filter-button-group').each(function (i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on('click', 'button', function () {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
+        });
+    });
+
+    //masonry for blog
+    $('.blog-container').isotope({
+        itemSelector: '.single-blog',
+        percentPosition: true,
+        masonry: {
+            // use outer width of grid-sizer for columnWidth
+            columnWidth: '.blog-sizer'
+        }
+    })
 })
+

@@ -42,7 +42,9 @@ px      68    160    252    */
 	.cursor2{
 		 display: none!important;
 	 }
-	 
+	 #moon{
+		 opacity: .3;
+	 }
 	
 }
 
